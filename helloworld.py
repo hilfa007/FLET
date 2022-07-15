@@ -1,7 +1,9 @@
 import flet
-from flet import Page
+from flet import Page,Text
 
 def main(page: Page):
-    pass
+    txt = Text(value="Hello World!!!!! \n It's me Hilfa here :)",color="green")
+    page.controls.append(txt)
+    page.update()
 
 flet.app(target=main)
