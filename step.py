@@ -3,6 +3,8 @@ from flet import Page,Text,Row
 from time import sleep
 
 def main(page: Page):
+
+    # Row
     page.add(
         Row(
             controls = [
@@ -13,6 +15,8 @@ def main(page: Page):
 
         )
     )
+
+    # Count Steps
     t = Text(color="blue")
     page.add(t)
     for i in range(10):

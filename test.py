@@ -3,6 +3,9 @@ from flet import Page,Row,TextField,ElevatedButton,Text
 from time import sleep
 
 def main(page: Page):
+
+    # Event Handling
+
     def btn_clicked(e):
         page.add(Text("sweet name!"))
 
@@ -12,6 +15,7 @@ def main(page: Page):
             page.controls.pop()
         page.update()
         sleep(0.3)
+    
     page.add(
         Row(
             controls=[

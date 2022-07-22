@@ -1,0 +1,22 @@
+pip install pyinstaller
+pyinstaller your_program.py
+
+# for windows
+dist\your_program\your_program.exe
+
+# You can hide that console window by rebuilding the package with --noconsole switch:
+pyinstaller your_program.py --noconsole --noconfirm
+
+# You can package all these in a single executable by using --onefile switch:
+pyinstaller your_program.py --noconsole --noconfirm --onefile
+
+# You can replace the icon with your own by adding --icon argument:
+pyinstaller your_program.py --noconsole --noconfirm --onefile --icon <your-image.png>
+
+pip install pillow
+
+# Your Flet app can include assets. Provided app assets are in assets folder next to your_program.py they can be added to an application package with --add-data argument, on macOS/Linux:
+pyinstaller your_program.py --noconsole --noconfirm --onefile --add-data "assets:assets"
+
+# On Windows assets;assets must be delimited with ;:
+pyinstaller your_program.py --noconsole --noconfirm --onefile --add-data "assets;assets"
